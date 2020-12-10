@@ -13,6 +13,9 @@ class PrototypesController < ApplicationController
        render :new
      end
   end
+  def show
+    @prototype = Prototype.find()
+  end
 
   private
   def prototype_params
