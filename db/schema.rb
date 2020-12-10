@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_064322) do
     t.text "catch_copy", null: false
     t.text "concept", null: false
     t.bigint "user_id"
-    t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_prototypes_on_user_id"
