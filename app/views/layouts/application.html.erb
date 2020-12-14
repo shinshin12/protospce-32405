@@ -28,7 +28,7 @@
                 <% if user_signed_in? %>
                 <div class="nav__right">
                <%= link_to "ログアウト", destroy_user_session_path, method: :DELETE, class: :nav__btn %>
-               <%= link_to "New Proto", class: :nav__btn %>
+               <%= link_to "New Proto", new_prototype_path, class: :nav__btn %>
                 <% else %>
               <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
               <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
