@@ -3,11 +3,12 @@
     <%# ログインしているときは以下を表示する %>
         <% if user_signed_in? %>
        <div class="greeting"> 
-        <%= link_to  root_path, class: :greeting__link do %>
-       <p>こんにちは<%= current_user.name %>さん</p>
+        <%= link_to "/users/#{current_user.id}", class: :greeting__link do %>
+       <p>こんにちは、<%= current_user.name %>さん</p>
         <% end %>
-      </div> 
-      <% end %>
+        <%#<% end %>
+      </div>
+    <% end %> 
     <%# // ログインしているときは上記を表示する %>
     <div class="card__wrapper">
     <%= render partial: 'prototype', collection: @prototypes %>
